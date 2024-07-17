@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <div>
+        {% if not user.is_authenticated %}
+            <p class="txt_log">Наслаждайтесь готовыми рецептами и делитесь своими (нужно быть зарегистрированным)
+                {% else %}
+            <div class="header_main">
+                <ul class="head_main_ull">
+                    <li><a class="non_line" href="{%  url 'cocktail:add_recipe' %}">Добавить рецепт блюда</a></li>
+                    <li><a class="non_line" href="{%  url 'cocktail:add_ingredient' %}">Добавить новый ингредиент</a></li>
+                    <li><a class="non_line" href="{%  url 'cocktail:add_category' %}">Создать новую категорию (ингридиента)</a></li>
+                    <li><a class="non_line" href="{%  url 'cocktail:all_cocktails' %}">Показать все рецепты</a></li>
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+    <div class="cont_main">
+        {% for recipe in cocktail %}
+            <div class="conter_main">
+                <h2><a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a></h2>
+                <img class="image_main" src="{{ recipe.image.url }}" alt="{{ recipe.title }}">
+                <p>{{ recipe.description|truncatechars:28 }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

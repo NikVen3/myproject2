@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Вход на сайт</h1>
+    <hr>
+    {% if for.errors %}
+    	<p>{{ form.errors.error }}</p>
+    {% endif %} 
+    <form action="{% url 'login' %}" method="post">
+    {{ form }}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-success">Войти в систему</button>
+    </form>
+    <a href="{% url 'password_reset' %}">Забыли пароль?</a>
+
+{% endblock %}

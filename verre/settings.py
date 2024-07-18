@@ -93,10 +93,10 @@ WSGI_APPLICATION = 'verre.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.mysql",
-        'NAME': 'nik123$default',
-        'USER': 'nik123',
+        'NAME': 'Nik123$default',
+        'USER': 'Nik123',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-        'HOST': 'nik123.mysql.pythonanywhere-services.com',
+        'HOST': 'Nik123.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',

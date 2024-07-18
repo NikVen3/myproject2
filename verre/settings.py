@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
 
     'dish',
+    'Nik123.pythonanywhere.com',
 ]
 
 MIDDLEWARE = [

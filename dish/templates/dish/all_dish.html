@@ -3,11 +3,11 @@
 {% block content %}
     <h1>Все рецепты блюд на нашем сайте</h1>
     <ul>
-    {% for cocktail in cocktails %}
+    {% for dish in dish %}
             <li>
-                <a href="{% url 'cocktail:cocktail_detail' cocktail.slug %}">
-                    <img class="image_main" src="{{ cocktail.image.url }}" alt="{{ cocktail.title }}">
-                    {{ cocktail.title }} , {{ cocktail.date_register }}
+                <a href="{% url 'dish:dish_detail' dish.slug %}">
+                    <img class="image_main" src="{{ dish.image.url }}" alt="{{ dish.title }}">
+                    {{ dish.title }} , {{ dish.date_register }}
                 </a>
             </li>
         {% empty %}

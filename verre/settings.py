@@ -98,7 +98,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         'NAME': 'Nik123$default',
         'USER': 'Nik123',
-        'PASSWORD': os.getenv('MYSQL_PASSWORD'),
+        # 'PASSWORD': os.getenv('MYSQL_PASSWORD'),
+        'PASSWORD': ('36bb509bda5edcce269d1accb7256f942786da2ae31c4dc4341b70cdca5cd2de'),
         'HOST': 'Nik123.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",

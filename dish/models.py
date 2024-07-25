@@ -60,6 +60,10 @@ class Dish(m.Model):
     ingredients = m.ManyToManyField(Ingredient, verbose_name='Ингридиенты')
     date_register = m.DateField(auto_now=True, verbose_name='Дата регистрации')
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(args, kwargs)
+
+
     def __str__(self):
         return f"Название: {self.title}, Описание: {self.description}"
 

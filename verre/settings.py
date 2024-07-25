@@ -32,7 +32,8 @@ else:
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-ALLOWED_HOSTS = ["127.0.0.1", "Nik123.pythonanywhere.com"]
+ALLOWED_HOSTS = ["127.0.0.1",
+                 "Nik123.pythonanywhere.com",]
 
 AUTH_USER_MODEL = 'users.User'
 LOGIN_REDIRECT_URL = '/'

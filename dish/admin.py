@@ -90,7 +90,7 @@ class CategoryCocktailTwoModelInline(admin.TabularInline):
 @admin.register(Dish)
 class DishAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
-    list_display = ['title', 'description', 'preparation_time','preparation_steps', 'preparation_time']
+    list_display = ['title', 'description', 'preparation_time', 'preparation_steps', 'preparation_time']
     search_fields = ['title', 'author']
     list_filter = ['title', 'author']
     fields = [

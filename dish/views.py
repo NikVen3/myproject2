@@ -53,7 +53,7 @@ class AddDishView(View):
         if form.is_valid():
             category = form.save(commit=False)
             category.save()
-            messages.success(request, 'блюдо успешно создан! 🎉')
+            messages.success(request, 'блюдо успешно создано! 🎉')
             return render(request, 'dish/add_category.html', {'form': form})
         return render(request, 'dish/add_category.html', {'form': form})
 
